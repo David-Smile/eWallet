@@ -76,22 +76,22 @@ flutter:
 fonts:
   - family: Avenir Next
     fonts:
-        - asset: assets/fonts/AvenirNextLTPro-Bold.otf
-        - asset: assets/fonts/AvenirNextLTPro-BoldCn.otf
-        - asset: assets/fonts/AvenirNextLTPro-Demi.otf
-        - asset: assets/fonts/AvenirNextLTPro-DemiCn.otf
-        - asset: assets/fonts/AvenirNextLTPro-lt.otf
-        - asset: assets/fonts/AvenirNextLTPro-Regular.otf
+      - asset: assets/fonts/AvenirNextLTPro-Bold.otf
+      - asset: assets/fonts/AvenirNextLTPro-BoldCn.otf
+      - asset: assets/fonts/AvenirNextLTPro-Demi.otf
+      - asset: assets/fonts/AvenirNextLTPro-DemiCn.otf
+      - asset: assets/fonts/AvenirNextLTPro-lt.otf
+      - asset: assets/fonts/AvenirNextLTPro-Regular.otf
   - family: Ubuntu
     fonts:
-        - asset: assets/fonts/Ubuntu-Bold.ttf
-        - asset: assets/fonts/Ubuntu-BoldItalic.ttf
-        - asset: assets/fonts/Ubuntu-Italic.ttf
-        - asset: assets/fonts/Ubuntu-Light.ttf
-        - asset: assets/fonts/Ubuntu-LightItalic.ttf
-        - asset: assets/fonts/Ubuntu-Medium.ttf
-        - asset: assets/fonts/Ubuntu-MediumItalic.ttf
-        - asset: assets/fonts/Ubuntu-Regular.ttf
+      - asset: assets/fonts/Ubuntu-Bold.ttf
+      - asset: assets/fonts/Ubuntu-BoldItalic.ttf
+      - asset: assets/fonts/Ubuntu-Italic.ttf
+      - asset: assets/fonts/Ubuntu-Light.ttf
+      - asset: assets/fonts/Ubuntu-LightItalic.ttf
+      - asset: assets/fonts/Ubuntu-Medium.ttf
+      - asset: assets/fonts/Ubuntu-MediumItalic.ttf
+      - asset: assets/fonts/Ubuntu-Regular.ttf
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

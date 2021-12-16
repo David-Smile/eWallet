@@ -17,7 +17,7 @@ class RoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 190,
+      // width: 190,
       height: 50.0,
       decoration: BoxDecoration(
           color: yellow,
@@ -35,18 +35,23 @@ class RoundedButton extends StatelessWidget {
       child: Material(
         type: MaterialType.transparency,
         child: InkWell(
-          borderRadius: BorderRadius.circular(24.0),
+          borderRadius: BorderRadius.circular(10.0),
           onTap: () {},
-          child: Center(
-            child: Text(
-              text,
-              style: TextStyle(
-                color: textColor,
-                fontFamily: 'Avenir Next',
-                fontSize: 16.0,
-                fontWeight: FontWeight.w700,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                text,
+                style: TextStyle(
+                  color: textColor,
+                  fontFamily: 'Avenir Next',
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-            ),
+              SizedBox(width: 8.0),
+              Icon(Icons.trending_flat_outlined)
+            ],
           ),
         ),
       ),

@@ -35,90 +35,82 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ],
             ),
           ),
-          const SizedBox(
-            width: 24,
-          ),
+          // const SizedBox(
+          //   width: 24,
+          // ),
           Flexible(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: <Widget>[
-                // ignore: prefer_const_constructors
-                Column(
-                  children: [
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        '06:20 PM',
-                        style: TextStyle(
-                          fontFamily: 'Avenir Next',
-                          fontSize: 24.0,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  const Text(
+                    '06:20 PM',
+                    style: TextStyle(
+                      fontFamily: 'Avenir Next',
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w500,
+                      color: black,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 7.0,
+                  ),
+                  Text(
+                    'Dec.16.2021 | Thursday',
+                    style: TextStyle(
+                        fontFamily: 'Avenir Next',
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.w500,
+                        color: grey),
+                  ),
+                  const SizedBox(
+                    height: 186.0,
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Image.asset(
+                      'assets/ewallet.png',
+                      height: 40,
+                      width: 60.65,
+                    ),
+                  ),
+                  const SizedBox(height: 17.6),
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'eWallet',
+                      style: TextStyle(
+                          fontFamily: 'Ubuntu',
+                          fontSize: 28.0,
                           fontWeight: FontWeight.w500,
-                          color: black,
-                        ),
-                      ),
+                          color: black),
                     ),
-                    const SizedBox(
-                      height: 7.0,
+                  ),
+                  const SizedBox(height: 16.0),
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Open An Acount For Digital \nE-wallet Solution.Instant \nPayment\n\nJoin For Free',
+                      style: TextStyle(
+                          fontFamily: 'Avenir Next',
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.normal,
+                          color: grey),
                     ),
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Dec.16.2021 | Thursday',
-                        style: TextStyle(
-                            fontFamily: 'Avenir Next',
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w500,
-                            color: grey),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 186.0,
-                    ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Image.asset(
-                        'assets/ewallet.png',
-                        height: 40,
-                        width: 60.65,
-                      ),
-                    ),
-                    const SizedBox(height: 17.6),
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'eWallet',
-                        style: TextStyle(
-                            fontFamily: 'Ubuntu',
-                            fontSize: 28.0,
-                            fontWeight: FontWeight.w900,
-                            color: black),
-                      ),
-                    ),
-                    const SizedBox(height: 16.0),
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Open An Acount For Digital \nE-wallet Solution.Instant \nPayment\n\nJoin For Free',
-                        style: TextStyle(
-                            fontFamily: 'Avenir Next',
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.normal,
-                            color: black),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 163.4,
-                    ),
-                    RoundedButton(text: 'Sign in', press: () {}),
-                    const SizedBox(height: 23.0),
-                    const ClickWidget(),
-                    const SizedBox(
-                      height: 53.0,
-                    ),
-                  ],
-                ),
-              ],
+                  ),
+                  const SizedBox(
+                    height: 163.4,
+                  ),
+                  RoundedButton(text: 'Sign in', press: () {}),
+                  const SizedBox(height: 23.0),
+                  Center(child: const ClickWidget()),
+                  const SizedBox(
+                    height: 53.0,
+                  ),
+                ],
+              ),
             ),
           )
         ],
