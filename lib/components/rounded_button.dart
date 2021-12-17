@@ -49,8 +49,8 @@ class RoundedButton extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(width: 8.0),
-              Icon(Icons.trending_flat_outlined)
+              const SizedBox(width: 8.0),
+              const Icon(Icons.trending_flat_outlined)
             ],
           ),
         ),
