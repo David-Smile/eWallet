@@ -105,7 +105,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                   RoundedButton(text: 'Sign in', press: () {}),
                   const SizedBox(height: 23.0),
-                  Center(child: const ClickWidget()),
+                  const Center(child: ClickWidget()),
                   const SizedBox(
                     height: 53.0,
                   ),
