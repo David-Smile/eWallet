@@ -1,5 +1,6 @@
 import 'package:e_wallet/components/constants.dart';
 import 'package:e_wallet/components/rounded_button.dart';
+import 'package:e_wallet/screens/home_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   const SizedBox(
                     height: 7.0,
                   ),
-                  Text(
+                  const Text(
                     'Dec.16.2021 | Thursday',
                     style: TextStyle(
                         fontFamily: 'Avenir Next',
@@ -80,7 +81,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'eWallet',
+                      'eWalle',
                       style: TextStyle(
                           fontFamily: 'Ubuntu',
                           fontSize: 28.0,
@@ -138,7 +139,13 @@ class ClickWidget extends StatelessWidget {
           TextSpan(
             text: ' Create New Account',
             style: linkStyle,
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                );
+              },
           ),
         ],
       ),
