@@ -38,7 +38,7 @@ class UserProfile extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     color: white,
-                    border: Border.all(color: blue),
+                    border: Border.all(color: blue.withOpacity(0.2)),
                   ),
                   child: Image.asset(
                     profile,

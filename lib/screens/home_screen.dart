@@ -12,15 +12,36 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Service> services = [
+    Service(img: 'assets/send_money.png', title: 'Send\nMoney'),
+    Service(img: 'assets/receive_money.png', title: ' Recieve\n Money'),
+    Service(img: 'assets/mobile_prepaid.png', title: ' Mobile\nPrepaid'),
+    Service(
+        img: 'assets/electricity_bill.png', title: 'Electricity \n      Bill'),
+    Service(img: 'assets/cashback.png', title: 'CashBack\n     Offer'),
+    Service(img: 'assets/movie_ticket.png', title: '  Movie\n Tickets'),
+    Service(img: 'assets/flight_ticket.png', title: ' Flight\nTickets'),
+    Service(img: 'assets/more_options.png', title: 'More\n    Options'),
+  ];
+  GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldkey,
+      drawer: const Drawer(),
       appBar: AppBar(
-        leading: Image.asset(
-          'assets/ewallet.png',
-          height: 31.0,
-          width: 47.0,
+        leading: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Image.asset(
+              'assets/ewallet.png',
+              height: 31.0,
+              width: 47.0,
+            ),
+          ],
         ),
+        centerTitle: false,
         title: const Text(
           'eWalle',
           style: TextStyle(
@@ -33,11 +54,17 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: white,
         elevation: 0,
         actions: [
-          Image.asset(
-            'assets/Union.png',
-            height: 19.0,
-            width: 19.0,
-          )
+          InkWell(
+            onTap: () {
+              _scaffoldkey.currentState?.openDrawer();
+            },
+            child: Image.asset(
+              'assets/Union.png',
+              height: 19.0,
+              width: 19.0,
+            ),
+          ),
+          const SizedBox(width: 25.0),
         ],
       ),
       body: Column(
@@ -48,6 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 20.0),
                 const Text(
                   'Account Overview',
                   style: TextStyle(
@@ -105,6 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 40.0),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
                       'Send Money',
@@ -114,9 +143,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w700,
                         color: blue,
                       ),
-                    ),
-                    const SizedBox(
-                      width: 207,
                     ),
                     Image.asset(
                       'assets/scan_icon.png',
@@ -175,6 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
                   'Services',
@@ -185,9 +212,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: blue,
                   ),
                 ),
-                const SizedBox(
-                  width: 239,
-                ),
                 Image.asset(
                   'assets/switch_icon.png',
                   height: 24.0,
@@ -197,89 +221,52 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(height: 20.0),
-          SizedBox(
-            height: 96.0,
-            width: 324.0,
-            child: Row(
-              children: <Widget>[
-                ServiceButton(
-                  press: () {},
-                  text: ' Send\nMoney',
-                  image: 'assets/send_money.png',
-                ),
-                const SizedBox(
-                  width: 28.0,
-                ),
-                ServiceButton(
-                  press: () {},
-                  text: 'Recieve\n Money',
-                  image: 'assets/receive_money.png',
-                ),
-                const SizedBox(
-                  width: 28.0,
-                ),
-                ServiceButton(
-                  press: () {},
-                  text: ' Mobile\nPrepaid',
-                  image: 'assets/mobile_prepaid.png',
-                ),
-                const SizedBox(
-                  width: 28.0,
-                ),
-                ServiceButton(
-                  press: () {},
-                  text: 'Electricity\n      Bill',
-                  image: 'assets/electricity_bill.png',
-                ),
-                const SizedBox(
-                  height: 28.0,
-                ),
-              ],
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          //   child: Wrap(
+          //     children: [
+          //       for (Service service in services)
+          //         Padding(
+          //           padding: const EdgeInsets.only(
+          //               right: 14.0, left: 14.0, bottom: 20.0),
+          //           child: ServiceButton(
+          //             press: () {},
+          //             text: service.title,
+          //             image: service.img,
+          //           ),
+          //         )
+          //     ],
+          //   ),
+          // ),
+
+          GridView.builder(
+            shrinkWrap: true,
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+              childAspectRatio: 2 / 2.5,
+              crossAxisSpacing: 10.0,
+              mainAxisSpacing: 20.0,
             ),
-          ),
-          const SizedBox(height: 20.0),
-          SizedBox(
-            height: 96.0,
-            width: 324.0,
-            child: Row(
-              children: <Widget>[
-                ServiceButton(
-                  press: () {},
-                  text: 'CashBack\n     Offer',
-                  image: 'assets/cashback.png',
-                ),
-                const SizedBox(
-                  width: 28.0,
-                ),
-                ServiceButton(
-                  press: () {},
-                  text: '  Movie\n Tickets',
-                  image: 'assets/movie_ticket.png',
-                ),
-                const SizedBox(
-                  width: 28.0,
-                ),
-                ServiceButton(
-                  press: () {},
-                  text: ' Flight\nTickets',
-                  image: 'assets/flight_ticket.png',
-                ),
-                const SizedBox(
-                  width: 28.0,
-                ),
-                ServiceButton(
-                  press: () {},
-                  text: 'Electricity\n      Bill',
-                  image: 'assets/more_options.png',
-                ),
-                const SizedBox(
-                  height: 28.0,
-                ),
-              ],
-            ),
+            itemCount: services.length,
+            itemBuilder: (BuildContext context, int index) {
+              Service service = services[index];
+              return ServiceButton(
+                press: () {},
+                text: service.title,
+                image: service.img,
+              );
+            },
           ),
         ],
       ),
     );
   }
+}
+
+class Service {
+  final String img;
+  final String title;
+
+  Service({required this.img, required this.title});
 }
