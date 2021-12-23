@@ -52,7 +52,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       fontFamily: 'Avenir Next',
                       fontSize: 24.0,
                       fontWeight: FontWeight.w500,
-                      color: black,
                     ),
                   ),
                   const SizedBox(
@@ -61,10 +60,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   const Text(
                     'Dec.16.2021 | Thursday',
                     style: TextStyle(
-                        fontFamily: 'Avenir Next',
-                        fontSize: 13.0,
-                        fontWeight: FontWeight.w500,
-                        color: grey),
+                      fontFamily: 'Avenir Next',
+                      fontSize: 13.0,
+                      fontWeight: FontWeight.w500,
+                      color: grey,
+                    ),
                   ),
                   const SizedBox(
                     height: 186.0,
@@ -83,10 +83,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     child: Text(
                       'eWalle',
                       style: TextStyle(
-                          fontFamily: 'Ubuntu',
-                          fontSize: 28.0,
-                          fontWeight: FontWeight.w500,
-                          color: black),
+                        fontFamily: 'Ubuntu',
+                        fontSize: 28.0,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 16.0),
@@ -126,11 +126,9 @@ class ClickWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const TextStyle defaultStyle = TextStyle(
-      color: black,
       fontSize: 16.0,
       fontFamily: 'Avenir Next',
     );
-    const TextStyle linkStyle = TextStyle(color: dark);
 
     return RichText(
       text: TextSpan(
@@ -138,7 +136,10 @@ class ClickWidget extends StatelessWidget {
         children: <TextSpan>[
           TextSpan(
             text: ' Create New Account',
-            style: linkStyle,
+            style: Theme.of(context).primaryTextTheme.bodyText1?.copyWith(
+              fontSize: 16.0,
+              fontWeight: FontWeight.w400
+            ),
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 Navigator.push(

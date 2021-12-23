@@ -50,7 +50,7 @@ class RoundedButton extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8.0),
-              const Icon(Icons.trending_flat_outlined)
+              const Icon(Icons.trending_flat_outlined, color: black,)
             ],
           ),
         ),

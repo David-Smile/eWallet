@@ -48,10 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
             fontSize: 28.0,
             fontFamily: 'Ubuntu',
             fontWeight: FontWeight.w500,
-            color: dark,
           ),
         ),
-        backgroundColor: white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
         actions: [
           InkWell(
@@ -62,6 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
               'assets/Union.png',
               height: 19.0,
               width: 19.0,
+              color: Theme.of(context).primaryTextTheme.caption?.color,
             ),
           ),
           const SizedBox(width: 25.0),
@@ -76,13 +76,13 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 20.0),
-                const Text(
+                Text(
                   'Account Overview',
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
-                    color: blue,
+                    color: Theme.of(context).primaryTextTheme.caption?.color,
                   ),
                 ),
                 const SizedBox(
@@ -135,19 +135,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                   Text(
                       'Send Money',
                       style: TextStyle(
                         fontFamily: 'Avenir Next',
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        color: blue,
+                        color: Theme.of(context).primaryTextTheme.caption?.color,
                       ),
                     ),
                     Image.asset(
                       'assets/scan_icon.png',
                       height: 24.0,
                       width: 24.0,
+                      color: Theme.of(context).primaryTextTheme.caption?.color,
                     )
                   ],
                 ),
@@ -203,19 +204,20 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   'Services',
                   style: TextStyle(
                     fontFamily: 'Avenir Next',
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
-                    color: blue,
+                    color: Theme.of(context).primaryTextTheme.caption?.color,
                   ),
                 ),
                 Image.asset(
                   'assets/switch_icon.png',
                   height: 24.0,
                   width: 24.0,
+                  color: Theme.of(context).primaryTextTheme.caption?.color,
                 )
               ],
             ),
